@@ -53,10 +53,16 @@ dependencies = [
     "tensorflow_graphics",
     "dlimp @ git+https://github.com/moojink/dlimp_openvla",
     "diffusers",
-    "imageio",
+    "imageio[ffmpeg]",
     "uvicorn",
     "fastapi",
     "json-numpy",
+    "robosuite==1.4.0",
+    "bddl",
+    "easydict",
+    "cloudpickle",
+    "gym",
+    "libero",
 ]
 
 [project.optional-dependencies]
@@ -118,3 +124,4 @@ torchvision = [
 torchaudio = [
   { index = "pytorch-cu121", marker = "sys_platform == 'linux' or sys_platform == 'win32'" },
 ]
+libero = { path = "./libero", editable = true }
